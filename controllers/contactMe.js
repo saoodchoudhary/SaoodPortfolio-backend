@@ -2,6 +2,7 @@ const ContactMeModel = require("../models/contactMe");
 
 
 const handleSaveContactMe = async (req, res) => {
+    console.log(req.body);
     
     try {
         const { name, email, message } = req.body;
