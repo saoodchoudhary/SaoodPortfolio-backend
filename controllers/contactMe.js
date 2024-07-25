@@ -1,4 +1,5 @@
 const ContactMeModel = require("../models/contactMe");
+const sendCustomEmail = require("../services/email");
 
 
 const handleSaveContactMe = async (req, res) => {
@@ -8,6 +9,7 @@ const handleSaveContactMe = async (req, res) => {
         const { name, email, message } = req.body;
         const newContact = new ContactMeModel({ name, email, message });
         await newContact.save();
+        sendCustomEmail(name, email, message)
         res.status(201).json({ message: 'Contact saved successfully' });
     } catch (error) {
         console.log(error);
