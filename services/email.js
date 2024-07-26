@@ -13,7 +13,7 @@ const sendCustomEmail = async (name, email , message)=>{
     });
 
     const template = {
-        from: "Saood PortFolio",
+        from: email,
         to:"saoodchoudhary9@gmail.com" ,
         subject:"From Portfolio - Contact Form Submission",
         html: `
