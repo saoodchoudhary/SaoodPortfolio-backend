@@ -15,7 +15,7 @@ const sendCustomEmail = async (name, email , message)=>{
     const template = {
         from: email,
         to:"saoodchoudhary9@gmail.com" ,
-        subject:"From Portfolio - Contact Form Submission",
+        subject:"From Portfolio- Contact Form Submission",
         html: `
         <!DOCTYPE html>
 <html lang="en">
